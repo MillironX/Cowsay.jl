@@ -1,5 +1,5 @@
 ```@meta
-CurrentModule = cowsay
+CurrentModule = Cowsay
 ```
 
 # cowsay
@@ -10,5 +10,5 @@ Documentation for [cowsay](https://github.com/MillironX/cowsay.jl).
 ```
 
 ```@autodocs
-Modules = [cowsay]
+Modules = [Cowsay]
 ```

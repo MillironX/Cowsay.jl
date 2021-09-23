@@ -4,7 +4,7 @@ using Documenter
 DocMeta.setdocmeta!(cowsay, :DocTestSetup, :(using cowsay); recursive=true)
 
 makedocs(;
-    modules=[cowsay],
+    modules=[Cowsay],
     authors="Thomas A. Christensen II <25492070+MillironX@users.noreply.github.com> and contributors",
     repo="https://github.com/MillironX/cowsay.jl/blob/{commit}{path}#{line}",
     sitename="cowsay.jl",

@@ -1,8 +1,13 @@
-module cowsay
+module Cowsay
 
-export cowsay_function
+export cowsay
 
-function cowsay_function(message::AbstractString)
+"""
+    cowsay(message::AbstractString)
+
+Prints a cow saying `message` as unwrapped text.
+"""
+function cowsay(message::AbstractString)
     messagelines = split(message, "\n")
     nlines = length(messagelines)
 
