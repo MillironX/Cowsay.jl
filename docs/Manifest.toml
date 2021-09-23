@@ -91,7 +91,7 @@ uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 [[Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
-[[cowsay]]
+[[Cowsay]]
 path = ".."
 uuid = "b6370f49-8ad1-4651-ad9e-3639b35da0e9"
 version = "0.1.0"
