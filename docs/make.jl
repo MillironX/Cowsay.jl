@@ -1,4 +1,4 @@
-using cowsay
+using Cowsay
 using Documenter
 
 DocMeta.setdocmeta!(Cowsay, :DocTestSetup, :(using Cowsay); recursive=true)
