@@ -1,4 +1,4 @@
-using cowsay
+using Cowsay
 using Test
 
 @testset "cowsay.jl" begin
