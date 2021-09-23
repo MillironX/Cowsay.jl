@@ -1,7 +1,7 @@
 using cowsay
 using Documenter
 
-DocMeta.setdocmeta!(cowsay, :DocTestSetup, :(using cowsay); recursive=true)
+DocMeta.setdocmeta!(cowsay, :DocTestSetup, :(using Cowsay); recursive=true)
 
 makedocs(;
     modules=[Cowsay],
