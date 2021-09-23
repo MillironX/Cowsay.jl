@@ -1,0 +1,3 @@
+var documenterSearchIndex = {"docs":
+[{"location":"","page":"Home","title":"Home","text":"CurrentModule = Cowsay","category":"page"},{"location":"#cowsay","page":"Home","title":"cowsay","text":"","category":"section"},{"location":"","page":"Home","title":"Home","text":"Documentation for cowsay.","category":"page"},{"location":"","page":"Home","title":"Home","text":"","category":"page"},{"location":"","page":"Home","title":"Home","text":"Modules = [Cowsay]","category":"page"},{"location":"#Cowsay.cowsay-Tuple{AbstractString}","page":"Home","title":"Cowsay.cowsay","text":"cowsay(message::AbstractString)\n\nPrints a cow saying message as unwrapped text.\n\n\n\n\n\n","category":"method"}]
+}
