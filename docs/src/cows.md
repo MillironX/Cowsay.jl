@@ -23,6 +23,7 @@ Cowsay.www
 ```@docs
 Cowsay.blowfish
 Cowsay.elephant
+Cowsay.tux
 ```
 
 ## Cows and friends
