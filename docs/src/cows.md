@@ -20,4 +20,5 @@ Cowsay.blowfish
 ```@docs
 Cowsay.bunny
 Cowsay.dragon_and_cow
+Cowsay.dragon
 ```
