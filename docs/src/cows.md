@@ -39,5 +39,6 @@ Cowsay.koala
 Cowsay.meow
 Cowsay.moose
 Cowsay.sheep
+Cowsay.stegosaurus
 Cowsay.vader_koala
 ```
