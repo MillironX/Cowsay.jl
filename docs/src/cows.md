@@ -13,6 +13,7 @@ Cowsay.moofasa
 Cowsay.mutilated
 Cowsay.skeleton
 Cowsay.small
+Cowsay.supermilker
 Cowsay.udder
 Cowsay.vader
 Cowsay.www
