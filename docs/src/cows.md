@@ -48,5 +48,6 @@ Cowsay.meow
 Cowsay.moose
 Cowsay.sheep
 Cowsay.stegosaurus
+Cowsay.turkey
 Cowsay.vader_koala
 ```
