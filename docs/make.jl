@@ -15,6 +15,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Available Cowfiles" => "cows.md"
     ],
 )
 

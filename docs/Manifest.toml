@@ -8,6 +8,11 @@ version = "0.0.1"
 [[Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
+[[Cowsay]]
+path = "/home/tchristensen/src/cowsay"
+uuid = "b6370f49-8ad1-4651-ad9e-3639b35da0e9"
+version = "0.1.0"
+
 [[Dates]]
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
@@ -90,8 +95,3 @@ uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [[Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
-
-[[Cowsay]]
-path = ".."
-uuid = "b6370f49-8ad1-4651-ad9e-3639b35da0e9"
-version = "0.1.0"
