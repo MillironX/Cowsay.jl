@@ -6,6 +6,7 @@ Examples of all the cowfiles available.
 
 ```@docs
 Cowsay.default
+Cowsay.cower
 ```
 
 ## Mascots
