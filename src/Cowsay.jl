@@ -4,7 +4,6 @@ export cowsay
 
 include("cows/blowfish.cow.jl")
 include("cows/bunny.cow.jl")
-include("cows/cheese.cow.jl")
 include("cows/cower.cow.jl")
 include("cows/default.cow.jl")
 include("cows/dragon-and-cow.cow.jl")
