@@ -49,5 +49,6 @@ Cowsay.moose
 Cowsay.sheep
 Cowsay.stegosaurus
 Cowsay.turkey
+Cowsay.turtle
 Cowsay.vader_koala
 ```
