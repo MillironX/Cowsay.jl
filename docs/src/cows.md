@@ -12,6 +12,7 @@ Cowsay.mech_and_cow
 Cowsay.moofasa
 Cowsay.mutilated
 Cowsay.skeleton
+Cowsay.small
 Cowsay.udder
 Cowsay.vader
 Cowsay.www
