@@ -3,13 +3,17 @@ module Cowsay
 export cowsay
 
 include("cows/default.cow.jl")
+include("cows/udder.cow.jl")
+include("cows/vader-koala.cow.jl")
+include("cows/vader.cow.jl")
+include("cows/www.cow.jl")
 
 """
     cowsay(message::AbstractString)
 
 Prints a cow saying `message` as unwrapped text.
 """
-function cowsay(message::AbstractString; eyes="oo", tongue="  ")
+function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     messagelines = split(message, "\n")
     nlines = length(messagelines)
 
@@ -54,7 +58,7 @@ function cowsay(message::AbstractString; eyes="oo", tongue="  ")
         )
     end
 
-println(string(balloon, default(eyes=eyes, tongue=tongue)))
+println(string(balloon, cow(eyes=eyes, tongue=tongue)))
 end
 
 
