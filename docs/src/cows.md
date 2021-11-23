@@ -7,8 +7,6 @@ Examples of all the cowfiles available.
 ```@docs
 Cowsay.default
 Cowsay.cower
-Cowsay.dragon_and_cow
-Cowsay.mech_and_cow
 Cowsay.moofasa
 Cowsay.mutilated
 Cowsay.skeleton
@@ -24,6 +22,14 @@ Cowsay.www
 ```@docs
 Cowsay.blowfish
 Cowsay.elephant
+```
+
+## Cows and friends
+
+```@docs
+Cowsay.dragon_and_cow
+Cowsay.mech_and_cow
+Cowsay.surgery
 ```
 
 ## Other
