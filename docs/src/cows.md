@@ -9,6 +9,7 @@ Cowsay.default
 Cowsay.cower
 Cowsay.udder
 Cowsay.vader
+Cowsay.www
 ```
 
 ## Mascots
