@@ -1,6 +1,25 @@
-##
-## The cow from a file called cow-n-horn, artist unknown.
-##
+"""
+    function udder()
+
+The cow from a file called cow-n-horn, artist unknown.
+
+# Example
+
+```jldoctest
+_______________
+< Milking time! >
+ ---------------
+  \\
+   \\    (__)
+        o o\\
+       ('') \\---------
+          \\           \\
+           |          |\\
+           ||---(  )_|| *
+           ||    UU  ||
+           ==        ==
+```
+"""
 function udder(;eyes="oo", tongue="  ", thoughts="\\")
 eye1 = first(eyes)
 eye2 = last(eyes)
