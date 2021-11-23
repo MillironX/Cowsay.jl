@@ -1,6 +1,6 @@
 using Cowsay
 using Test
+using Documenter
 
-@testset "cowsay.jl" begin
-    # Write your tests here.
-end
+DocMeta.setdocmeta!(Cowsay, :DocTestSetup, :(using Cowsay); recursive=true)
+doctest(Cowsay)
