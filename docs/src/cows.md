@@ -21,4 +21,5 @@ Cowsay.blowfish
 Cowsay.bunny
 Cowsay.dragon_and_cow
 Cowsay.dragon
+Cowsay.elephant_in_snake
 ```
