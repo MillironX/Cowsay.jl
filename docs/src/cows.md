@@ -8,6 +8,7 @@ Examples of all the cowfiles available.
 Cowsay.default
 Cowsay.cower
 Cowsay.udder
+Cowsay.vader
 ```
 
 ## Mascots
