@@ -29,5 +29,6 @@ Cowsay.elephant_in_snake
 Cowsay.eyes
 Cowsay.flaming_sheep
 Cowsay.fox
+Cowsay.kitty
 Cowsay.vader_koala
 ```
