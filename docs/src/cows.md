@@ -9,6 +9,7 @@ Cowsay.default
 Cowsay.cower
 Cowsay.dragon_and_cow
 Cowsay.mech_and_cow
+Cowsay.moofasa
 Cowsay.udder
 Cowsay.vader
 Cowsay.www
