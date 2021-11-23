@@ -10,6 +10,7 @@ Cowsay.cower
 Cowsay.dragon_and_cow
 Cowsay.mech_and_cow
 Cowsay.moofasa
+Cowsay.mutilated
 Cowsay.udder
 Cowsay.vader
 Cowsay.www
