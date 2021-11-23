@@ -2,7 +2,15 @@ module Cowsay
 
 export cowsay
 
+include("cows/blowfish.cow.jl")
+include("cows/bunny.cow.jl")
+include("cows/cheese.cow.jl")
+include("cows/cower.cow.jl")
 include("cows/default.cow.jl")
+include("cows/dragon-and-cow.cow.jl")
+include("cows/dragon.cow.jl")
+include("cows/elephant-in-snake.cow.jl")
+include("cows/elephant.cow.jl")
 include("cows/udder.cow.jl")
 include("cows/vader-koala.cow.jl")
 include("cows/vader.cow.jl")
