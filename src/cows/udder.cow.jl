@@ -6,7 +6,8 @@ The cow from a file called cow-n-horn, artist unknown.
 # Example
 
 ```jldoctest
-_______________
+julia> cowsay("Milking time!", cow=Cowsay.udder)
+ _______________
 < Milking time! >
  ---------------
   \\
