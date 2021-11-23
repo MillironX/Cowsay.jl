@@ -26,5 +26,6 @@ Cowsay.bunny
 Cowsay.dragon_and_cow
 Cowsay.dragon
 Cowsay.elephant_in_snake
+Cowsay.flaming_sheep
 Cowsay.vader_koala
 ```
