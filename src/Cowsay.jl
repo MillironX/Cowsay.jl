@@ -2,6 +2,8 @@ module Cowsay
 
 export cowsay
 
+include("cows/default.cow.jl")
+
 """
     cowsay(message::AbstractString)
 
@@ -52,15 +54,7 @@ function cowsay(message::AbstractString)
         )
     end
 
-    cow = string(
-        "        \\   ^__^\n",
-        "         \\  (oo)\\_______\n",
-        "            (__)\\       )\\/\\\n",
-        "                ||----w |\n",
-        "                ||     ||"
-    )
-
-println(string(balloon, cow))
+println(string(balloon, default()))
 end
 
 
