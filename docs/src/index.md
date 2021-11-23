@@ -2,9 +2,13 @@
 CurrentModule = Cowsay
 ```
 
-# cowsay
+# Cowsay.jl
 
-Documentation for [cowsay](https://github.com/MillironX/cowsay.jl).
+A Julia package that lets you use
+[cowsay](https://en.wikipedia.org/wiki/Cowsay) in your Julia programs!
 
-```@index
+## Usage
+
+```@docs
+Cowsay.cowsay
 ```
