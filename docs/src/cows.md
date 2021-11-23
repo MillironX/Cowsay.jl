@@ -12,6 +12,7 @@ Cowsay.mutilated
 Cowsay.skeleton
 Cowsay.small
 Cowsay.supermilker
+Cowsay.three_eyes
 Cowsay.udder
 Cowsay.vader
 Cowsay.www
