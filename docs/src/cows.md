@@ -36,5 +36,6 @@ Cowsay.kitty
 Cowsay.koala
 Cowsay.meow
 Cowsay.moose
+Cowsay.sheep
 Cowsay.vader_koala
 ```
