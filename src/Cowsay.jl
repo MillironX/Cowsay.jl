@@ -9,7 +9,7 @@ include("cows/default.cow.jl")
 
 Prints a cow saying `message` as unwrapped text.
 """
-function cowsay(message::AbstractString)
+function cowsay(message::AbstractString; eyes="oo", tongue="  ")
     messagelines = split(message, "\n")
     nlines = length(messagelines)
 
@@ -54,7 +54,7 @@ function cowsay(message::AbstractString)
         )
     end
 
-println(string(balloon, default()))
+println(string(balloon, default(eyes=eyes, tongue=tongue)))
 end
 
 
