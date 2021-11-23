@@ -13,6 +13,7 @@ Cowsay.cower
 
 ```@docs
 Cowsay.blowfish
+Cowsay.elephant
 ```
 
 ## Other
