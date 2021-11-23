@@ -30,5 +30,6 @@ Cowsay.eyes
 Cowsay.flaming_sheep
 Cowsay.fox
 Cowsay.kitty
+Cowsay.koala
 Cowsay.vader_koala
 ```
