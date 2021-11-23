@@ -7,6 +7,7 @@ Examples of all the cowfiles available.
 ```@docs
 Cowsay.default
 Cowsay.cower
+Cowsay.dragon_and_cow
 Cowsay.udder
 Cowsay.vader
 Cowsay.www
@@ -23,7 +24,6 @@ Cowsay.elephant
 
 ```@docs
 Cowsay.bunny
-Cowsay.dragon_and_cow
 Cowsay.dragon
 Cowsay.elephant_in_snake
 Cowsay.eyes
