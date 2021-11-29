@@ -3,7 +3,7 @@
 
 # Example
 
-```
+```jldoctest
 julia> cowsay("What does the fox say?", cow=Cowsay.fox)
  ________________________
 < What does the fox say? >
