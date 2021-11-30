@@ -10,7 +10,7 @@ makedocs(;
     sitename="cowsay.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://MillironX.github.io/cowsay.jl",
+        canonical="https://millironx.com/Cowsay.jl",
         assets=String[],
     ),
     pages=[
@@ -20,6 +20,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/MillironX/cowsay.jl",
+    repo="github.com/millironx/Cowsay.jl",
     devbranch="master",
 )
