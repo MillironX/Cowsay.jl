@@ -21,6 +21,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/millironx/Cowsay.jl",
+    repo="github.com/MillironX/Cowsay.jl",
     devbranch="master",
 )
