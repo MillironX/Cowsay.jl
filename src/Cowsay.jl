@@ -51,6 +51,19 @@ Print an ASCII picture of a cow saying `message`
     cowfiles support this, though.
 - `tongue::AbstractString="  "`: A two-character string to be drawn in for the tongue. Not
     all cowfiles support this.
+
+# Example
+```jldoctest
+julia> cowsay("Have you mooed today?")
+ _______________________
+< Have you mooed today? >
+ -----------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
 """
 function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     balloon = sayballoon(message)
