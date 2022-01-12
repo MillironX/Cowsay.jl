@@ -1,6 +1,7 @@
 module Cowsay
 
 export cowsay
+export cowthink
 
 include("cows/blowfish.cow.jl")
 include("cows/bunny.cow.jl")
@@ -94,6 +95,11 @@ a cow function **must**
 function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     balloon = sayballoon(message)
     println(string(balloon, cow(eyes=eyes, tongue=tongue)))
+end
+
+function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ")
+    balloon = thinkballoon(message)
+    println(string(balloon, cow(eyes=eyes, tongue=tongue, thoughts="o")))
 end
 
 function sayballoon(message::AbstractString)
