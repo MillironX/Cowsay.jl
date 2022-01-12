@@ -38,8 +38,9 @@ include("cows/www.cow.jl")
 
 """
     cowsay(message::AbstractString; kwargs...)
+    cowthink(message::AbstractString; kwargs...)
 
-Print an ASCII picture of a cow saying `message`
+Print an ASCII picture of a cow saying/thinking `message`
 
 # Arguments
 - `message::AbstractString`: Tell the cow what to say
@@ -60,6 +61,16 @@ julia> cowsay("Have you mooed today?")
  -----------------------
         \\   ^__^
          \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||
+
+julia> cowthink("Have I mooed today?")
+ _____________________
+( Have I mooed today? )
+ ---------------------
+        o   ^__^
+         o  (oo)\\_______
             (__)\\       )\\/\\
                 ||----w |
                 ||     ||
