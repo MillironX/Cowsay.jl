@@ -92,6 +92,11 @@ a cow function **must**
 6. Have fun!
 """
 function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
+    balloon = sayballoon(message)
+    println(string(balloon, cow(eyes=eyes, tongue=tongue)))
+end
+
+function sayballoon(message::AbstractString)
     messagelines = split(message, "\n")
     nlines = length(messagelines)
 
@@ -136,8 +141,9 @@ function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
         )
     end
 
-println(string(balloon, cow(eyes=eyes, tongue=tongue)))
-end
+    return balloon
+
+end #function
 
 
 end
