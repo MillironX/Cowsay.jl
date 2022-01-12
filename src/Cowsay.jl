@@ -145,5 +145,35 @@ function sayballoon(message::AbstractString)
 
 end #function
 
+function thinkballoon(message::AbstractString)
+    messagelines = split(message, "\n")
+    nlines = length(messagelines)
+
+    linelength = max(length.(messagelines)...)
+    paddinglength = linelength + 2
+
+        balloon = string(
+            " ",
+            repeat("_", paddinglength),
+            "\n"
+        )
+        for i in 1:nlines
+            balloon = string(
+                balloon,
+                "( ",
+                rpad(messagelines[i], linelength),
+                " )\n"
+            )
+        end #for
+        balloon = string(
+            balloon,
+            " ",
+            repeat("-", paddinglength),
+            "\n"
+        )
+
+    return balloon
+end #function
+
 
 end
