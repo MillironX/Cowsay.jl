@@ -8,6 +8,12 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+## [v0.2.1] - 2022-01-11
+
+### Added
+
+- `cowthink` function
+
 ## [v0.2.0] - 2021-11-29
 
 ### Added
@@ -59,6 +65,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 - `cowsay` function for Julia in package format
 
-[Unreleased]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.1...HEAD
+[v0.2.1]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.0...v0.2.1
 [v0.2.0]: https://github.com/MillironX/Cowsay.jl/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/MillironX/Cowsay.jl/releases/tag/v0.1.0
