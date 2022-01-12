@@ -81,6 +81,13 @@ function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     println(string(balloon, cow(eyes=eyes, tongue=tongue)))
 end
 
+"""
+    cowthink(message::AbstractString; kwargs...)
+
+Print an ASCII picture of a cow thinking `message`
+
+See [`cowsay`](@ref)
+"""
 function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     balloon = thinkballoon(message)
     println(string(balloon, cow(eyes=eyes, tongue=tongue, thoughts="o")))
