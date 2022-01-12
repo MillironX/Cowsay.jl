@@ -93,6 +93,13 @@ function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     println(string(balloon, cow(eyes=eyes, tongue=tongue, thoughts="o")))
 end
 
+"""
+    function sayballoon(message::AbstractString)
+
+Creates the balloon portion of the art for [`cowsay`](@ref)
+
+See also [`cowsay`](@ref), [`thinkballoon`](@ref)
+"""
 function sayballoon(message::AbstractString)
     messagelines = split(message, "\n")
     nlines = length(messagelines)
@@ -142,6 +149,13 @@ function sayballoon(message::AbstractString)
 
 end #function
 
+"""
+    function thinkballoon(message::AbstractString)
+
+Creates the balloon portion of the art for [`cowthink`](@ref)
+
+See also [`cowthink`](@ref), [`sayballoon`](@ref)
+"""
 function thinkballoon(message::AbstractString)
     messagelines = split(message, "\n")
     nlines = length(messagelines)
