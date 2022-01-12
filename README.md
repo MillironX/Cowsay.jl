@@ -18,3 +18,82 @@
 
 A talking cow library for Julia, based on the [Fedora release of
 cowsay](https://src.fedoraproject.org/rpms/cowsay).
+
+## Installation
+
+You can install straight from the [Julia REPL]. Press `]` to enter [pkg mode],
+then:
+
+```julia
+add Cowsay
+```
+
+## Usage
+
+Complete usage info can be found in [the documentation]. Cowsay.jl exports two
+functions: `cowsay` and `cowthink`, which print an ASCII cow saying or thinking
+a message without text wrapping, respectively.
+
+```julia-repl
+julia> using Cowsay
+julia> cowsay("Bessie the heifer\nthe queen of all the cows.")
+ ____________________________
+/ Bessie the heifer:         \
+\ the queen of all the cows. /
+ ----------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+julia> cowthink("The farmers who have no livestock,\ntheir lives simply aren't the best")
+ ____________________________________
+( The farmers who have no livestock, )
+( their lives simply aren't the best )
+ ------------------------------------
+        o   ^__^
+         o  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
+There are also plenty of [unexported Cowfiles] that you can use to customize
+your art.
+
+```julia-repl
+julia> cowsay("Super cattle growth hormone can make your beef delicious", cow=Cowsay.udder)
+ __________________________________________________________
+< Super cattle growth hormone can make your beef delicious >
+ ----------------------------------------------------------
+  \
+   \    (__)
+        o o\
+       ('') \---------
+          \           \
+           |          |\
+           ||---(  )_|| *
+           ||    UU  ||
+           ==        ==
+```
+
+You can also change the eyeballs and tongue of your cow.
+
+```julia-repl
+julia> cowsay("You better watch your step\nwhen you know the chips are down!", tongue=" U", eyes="00")
+ ___________________________________
+/ You better watch your step        \
+\ when you know the chips are down! /
+ -----------------------------------
+        \   ^__^
+         \  (00)\_______
+            (__)\       )\/\
+              U ||----w |
+                ||     ||
+```
+
+[Julia REPL]: https://docs.julialang.org/en/v1/manual/getting-started/
+[pkg mode]: https://docs.julialang.org/en/v1/stdlib/Pkg/
+[the documentation]: https://millironx.com/Cowsay.jl/stable
+[unexported Cowfiles]: https://millironx.com/Cowsay.jl/stable/cows/
