@@ -8,4 +8,14 @@ DocMeta.setdocmeta!(Cowsay, :DocTestSetup, :(using Cowsay); recursive=true)
     @testset "Doctests" begin
         doctest(Cowsay)
     end
+    @testset "Balloon Formation" begin
+        # One-liner say balloon
+        @test Cowsay.sayballoon("One line") == " __________\n< One line >\n ----------\n"
+
+        # Two-liner say balloon
+        @test Cowsay.sayballoon("One line\nTwo line") == " __________\n/ One line \\\n\\ Two line /\n ----------\n"
+
+        # Multi-liner say balloon
+        @test Cowsay.sayballoon("One line\nTwo line\nRed line\nBlue line") == " ___________\n/ One line  \\\n| Two line  |\n| Red line  |\n\\ Blue line /\n -----------\n"
+    end
 end
