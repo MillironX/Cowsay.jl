@@ -1,5 +1,7 @@
 module Cowsay
 
+using TextWrap
+
 export cowsay
 export cowthink
 export cowsaid
@@ -120,8 +122,8 @@ julia> cowthunk("Have I mooed today?")
 " _____________________\\n( Have I mooed today? )\\n ---------------------\\n        o   ^__^\\n         o  (oo)\\\\_______\\n            (__)\\\\       )\\\\/\\\\\\n                ||----w |\\n                ||     ||\\n"
 ```
 """
-function cowsaid(message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    balloon = sayballoon(message)
+function cowsaid(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
+    balloon = sayballoon(TextWrap.wrap(message, width=wrap))
     return string(balloon, cow(eyes=eyes, tongue=tongue))
 end
 
@@ -132,8 +134,8 @@ Construct art of a cow thinking `message`.
 
 See [`cowsaid`](@ref) and [`cowsay`](@ref)
 """
-function cowthunk(message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    balloon = thinkballoon(message)
+function cowthunk(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
+    balloon = thinkballoon(TextWrap.wrap(message, width=wrap))
     return string(balloon, cow(eyes=eyes, tongue=tongue, thoughts="o"))
 end
 
