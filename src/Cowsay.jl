@@ -2,6 +2,7 @@ module Cowsay
 
 export cowsay
 export cowthink
+export cowsaid
 
 include("cows/blowfish.cow.jl")
 include("cows/bunny.cow.jl")
@@ -77,8 +78,7 @@ julia> cowthink("Have I mooed today?")
 ```
 """
 function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    balloon = sayballoon(message)
-    println(string(balloon, cow(eyes=eyes, tongue=tongue)))
+    println(cowsaid(message, cow=cow, eyes=eyes, tongue=tongue))
 end
 
 """
@@ -91,6 +91,25 @@ See [`cowsay`](@ref)
 function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     balloon = thinkballoon(message)
     println(string(balloon, cow(eyes=eyes, tongue=tongue, thoughts="o")))
+end
+
+"""
+    cowsaid(message::AbstractString; kwargs...)
+    cowthunk(message::AbstractString; kwargs...)
+
+Constructs cow art and returns it as a string instead of printing it. See [`cowsay`](@ref)
+for implementation details.
+
+# Example
+
+```jldoctest
+julia> cowsaid("Have you mooed today?")
+" _______________________\\n< Have you mooed today? >\\n -----------------------\\n        \\\\   ^__^\\n         \\\\  (oo)\\\\_______\\n            (__)\\\\       )\\\\/\\\\\\n                ||----w |\\n                ||     ||\\n"
+```
+"""
+function cowsaid(message::AbstractString; cow=default, eyes="oo", tongue="  ")
+    balloon = sayballoon(message)
+    return string(balloon, cow(eyes=eyes, tongue=tongue))
 end
 
 """
