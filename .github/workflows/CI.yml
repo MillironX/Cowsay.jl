@@ -10,9 +10,10 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - '1.0'
-          - '1.6'
-          - 'nightly'
+          - '1.0' # old LTS
+          - '1.6' # new LTS
+          - '1'   # Latest stable
+          - 'nightly' # 'nuf said
         os:
           - ubuntu-latest
         arch:
