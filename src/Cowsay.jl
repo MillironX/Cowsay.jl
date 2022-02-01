@@ -56,6 +56,7 @@ Print an ASCII picture of a cow saying/thinking `message`
     cowfiles support this, though.
 - `tongue::AbstractString="  "`: A two-character string to be drawn in for the tongue. Not
     all cowfiles support this.
+- `wrap::Int`=40: The number of characters at which to wrap `message` to a new line
 
 # Example
 ```jldoctest
@@ -80,12 +81,12 @@ julia> cowthink("Have I mooed today?")
                 ||     ||
 ```
 """
-function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    cowsay(stdout, message, cow=cow, eyes=eyes, tongue=tongue)
+function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
+    cowsay(stdout, message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap)
 end
 
-function cowsay(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    println(io, cowsaid(message, cow=cow, eyes=eyes, tongue=tongue))
+function cowsay(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
+    println(io, cowsaid(message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap))
 end
 
 """
@@ -95,12 +96,12 @@ Print an ASCII picture of a cow thinking `message`
 
 See [`cowsay`](@ref)
 """
-function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    cowthink(stdout, message, cow=cow, eyes=eyes, tongue=tongue)
+function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
+    cowthink(stdout, message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap)
 end
 
-function cowthink(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    println(io, cowthunk(message, cow=cow, eyes=eyes, tongue=tongue))
+function cowthink(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
+    println(io, cowthunk(message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap))
 end
 
 """
