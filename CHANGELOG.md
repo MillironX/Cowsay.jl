@@ -8,6 +8,10 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+### Added
+
+- `cowsaid` and `cowthunk` functions for getting cow art without printing it
+
 ## [v0.2.1] - 2022-01-11
 
 ### Added
