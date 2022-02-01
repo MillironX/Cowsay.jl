@@ -125,6 +125,13 @@ function cowsaid(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     return string(balloon, cow(eyes=eyes, tongue=tongue))
 end
 
+"""
+    cowthunk(message::AbstractString; kwargs...)
+
+Construct art of a cow thinking `message`.
+
+See [`cowsaid`](@ref) and [`cowsay`](@ref)
+"""
 function cowthunk(message::AbstractString; cow=default, eyes="oo", tongue="  ")
     balloon = thinkballoon(message)
     return string(balloon, cow(eyes=eyes, tongue=tongue, thoughts="o"))
