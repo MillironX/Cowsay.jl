@@ -18,4 +18,11 @@ DocMeta.setdocmeta!(Cowsay, :DocTestSetup, :(using Cowsay); recursive=true)
         # Multi-liner say balloon
         @test Cowsay.sayballoon("One line\nTwo line\nRed line\nBlue line") == " ___________\n/ One line  \\\n| Two line  |\n| Red line  |\n\\ Blue line /\n -----------\n"
     end
+    @testset "IO Funkiness" begin
+        # Cowsay with io redirection
+        @test_warn cowsaid("Moo") cowsay(stderr, "Moo")
+
+        # Cowthink with io redirection
+        @test_warn cowthunk("Moo") cowthink(stderr, "Moo")
+    end
 end

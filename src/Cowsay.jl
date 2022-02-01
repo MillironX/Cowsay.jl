@@ -39,8 +39,8 @@ include("cows/vader.cow.jl")
 include("cows/www.cow.jl")
 
 """
-    cowsay(message::AbstractString; kwargs...)
-    cowthink(message::AbstractString; kwargs...)
+    cowsay([io,] message::AbstractString; kwargs...)
+    cowthink([io,] message::AbstractString; kwargs...)
 
 Print an ASCII picture of a cow saying/thinking `message`
 
@@ -79,18 +79,26 @@ julia> cowthink("Have I mooed today?")
 ```
 """
 function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    println(cowsaid(message, cow=cow, eyes=eyes, tongue=tongue))
+    cowsay(stdout, message, cow=cow, eyes=eyes, tongue=tongue)
+end
+
+function cowsay(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ")
+    println(io, cowsaid(message, cow=cow, eyes=eyes, tongue=tongue))
 end
 
 """
-    cowthink(message::AbstractString; kwargs...)
+    cowthink([io,] message::AbstractString; kwargs...)
 
 Print an ASCII picture of a cow thinking `message`
 
 See [`cowsay`](@ref)
 """
 function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ")
-    println(cowthunk(message, cow=cow, eyes=eyes, tongue=tongue))
+    cowthink(stdout, message, cow=cow, eyes=eyes, tongue=tongue)
+end
+
+function cowthink(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ")
+    println(io, cowthunk(message, cow=cow, eyes=eyes, tongue=tongue))
 end
 
 """
