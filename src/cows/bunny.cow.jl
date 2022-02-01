@@ -7,9 +7,10 @@ A cute little wabbit
 
 ```jldoctest
 julia> cowsay("Look at that tortoise way off in the distance.", cow=Cowsay.bunny)
- ________________________________________________
-< Look at that tortoise way off in the distance. >
- ------------------------------------------------
+ ______________________________________
+/ Look at that tortoise way off in the \\
+\\ distance.                            /
+ --------------------------------------
   \\
    \\   \\
         \\ /\\

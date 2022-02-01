@@ -6,9 +6,10 @@ A mutilated cow, from aspolito@csua.berkeley.edu
 # Example
 ```jldoctest
 julia> cowsay("I wouldn't have been so eager to make head cheese...", cow=Cowsay.mutilated)
- ______________________________________________________
-< I wouldn't have been so eager to make head cheese... >
- ------------------------------------------------------
+ _______________________________________
+/ I wouldn't have been so eager to make \\
+\\ head cheese...                        /
+ ---------------------------------------
        \\   \\_______
  v__v   \\  \\   O   )
  (oo)      ||----w |
