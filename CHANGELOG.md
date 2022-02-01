@@ -8,6 +8,8 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+## [v0.3.0] - 2022-02-01
+
 ### Added
 
 - `cowsaid` and `cowthunk` functions for getting cow art without printing it
@@ -71,7 +73,8 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 - `cowsay` function for Julia in package format
 
-[Unreleased]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/MillironX/Cowsay.jl/compare/v0.3.0...HEAD
+[v0.3.0]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.1...v0.3.0
 [v0.2.1]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.0...v0.2.1
 [v0.2.0]: https://github.com/MillironX/Cowsay.jl/compare/v0.1.0...v0.2.0
 [v0.1.0]: https://github.com/MillironX/Cowsay.jl/releases/tag/v0.1.0
