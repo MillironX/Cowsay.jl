@@ -11,6 +11,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 
 - `cowsaid` and `cowthunk` functions for getting cow art without printing it
+- Optional IO choice for `cowsay` and `cowthink` functions
 
 ## [v0.2.1] - 2022-01-11
 
