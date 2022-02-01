@@ -11,4 +11,5 @@ A Julia package that lets you use
 
 ```@docs
 Cowsay.cowsay
+Cowsay.cowsaid
 ```
