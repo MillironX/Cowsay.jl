@@ -3,12 +3,16 @@ uuid = "b6370f49-8ad1-4651-ad9e-3639b35da0e9"
 authors = ["Thomas A. Christensen II <25492070+MillironX@users.noreply.github.com> and contributors"]
 version = "0.2.1"
 
+[deps]
+TextWrap = "b718987f-49a8-5099-9789-dcd902bef87d"
+
 [compat]
 julia = "1"
+TextWrap = "1"
 
 [extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
 test = ["Test", "Documenter"]
