@@ -162,7 +162,7 @@ function cowmoo(message::AbstractString, mode; kwargs...)
         thoughts = "\\"
     end
 
-    wrapped_message = !nowrap ? TextWrap.wrap(message, width=wrap) : message
+    wrapped_message = !nowrap ? TextWrap.wrap(message, width=wrap, replace_whitespace=false) : message
     speechbubble = balloon(wrapped_message)
 
     return string(speechbubble, cow(eyes=eyes, tongue=tongue, thoughts=thoughts))
