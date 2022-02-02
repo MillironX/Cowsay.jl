@@ -81,12 +81,12 @@ julia> cowthink("Have I mooed today?")
                 ||     ||
 ```
 """
-function cowsay(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
-    cowsay(stdout, message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap)
+function cowsay(message::AbstractString; kwargs...)
+    cowsay(stdout, message; kwargs...)
 end
 
-function cowsay(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
-    println(io, cowsaid(message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap))
+function cowsay(io::IO, message::AbstractString; kwargs...)
+    println(io, cowsaid(message; kwargs...))
 end
 
 """
@@ -96,12 +96,12 @@ Print an ASCII picture of a cow thinking `message`
 
 See [`cowsay`](@ref)
 """
-function cowthink(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
-    cowthink(stdout, message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap)
+function cowthink(message::AbstractString; kwargs...)
+    cowthink(stdout, message; kwargs...)
 end
 
-function cowthink(io::IO, message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
-    println(io, cowthunk(message, cow=cow, eyes=eyes, tongue=tongue, wrap=wrap))
+function cowthink(io::IO, message::AbstractString; kwargs...)
+    println(io, cowthunk(message; kwargs...))
 end
 
 """
@@ -123,9 +123,8 @@ julia> cowthunk("Have I mooed today?")
 " _____________________\\n( Have I mooed today? )\\n ---------------------\\n        o   ^__^\\n         o  (oo)\\\\_______\\n            (__)\\\\       )\\\\/\\\\\\n                ||----w |\\n                ||     ||\\n"
 ```
 """
-function cowsaid(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
-    balloon = sayballoon(TextWrap.wrap(message, width=wrap))
-    return string(balloon, cow(eyes=eyes, tongue=tongue))
+function cowsaid(message::AbstractString; kwargs...)
+    return cowmoo(message, :say; kwargs...)
 end
 
 """
@@ -135,9 +134,59 @@ Construct art of a cow thinking `message`.
 
 See [`cowsaid`](@ref) and [`cowsay`](@ref)
 """
-function cowthunk(message::AbstractString; cow=default, eyes="oo", tongue="  ", wrap=40)
-    balloon = thinkballoon(TextWrap.wrap(message, width=wrap))
-    return string(balloon, cow(eyes=eyes, tongue=tongue, thoughts="o"))
+function cowthunk(message::AbstractString; kwargs...)
+    return cowmoo(message, :think; kwargs...)
+end
+
+"""
+    cowmoo(message::AbstractString, mode, kwargs...)
+
+Converts `message` into either saying or thinking art based on the value of `mode`. All of
+the default values for `kwargs` for pretty much every other function live here. See
+[`cowsay`](@ref) for their descriptions.
+"""
+function cowmoo(message::AbstractString, mode; kwargs...)
+    cow = dict_or_default(kwargs, :cow, Cowsay.default)
+    eyes = dict_or_default(kwargs, :eyes, "oo")
+    tongue = dict_or_default(kwargs, :tongue, "  ")
+    wrap = dict_or_default(kwargs, :wrap, 40)
+
+    # Default to 'say' mode
+    if mode ==:think
+        balloon = thinkballoon
+        thoughts = "o"
+    else
+        balloon = sayballoon
+        thoughts = "\\"
+    end
+
+    speechbubble = balloon(TextWrap.wrap(message, width=wrap))
+
+    return string(speechbubble, cow(eyes=eyes, tongue=tongue, thoughts=thoughts))
+end
+
+"""
+    dict_or_default(dict, key, value)
+
+If `key` is present in `dict`, then return `dict[key]`, otherwise return `value`
+
+# Example
+```jldoctest
+julia> dict = Dict(:holstein => "lotsa milk", :jersey => "butterfat", :shorthorn => "worthless");
+
+julia> Cowsay.dict_or_default(dict, :holstein, "fluid")
+"lotsa milk"
+
+julia> Cowsay.dict_or_default(dict, :brown_swiss, "cheese")
+"cheese"
+```
+"""
+function dict_or_default(dict, key, value)
+    if haskey(dict, key)
+        return dict[key]
+    else
+        return value
+    end
 end
 
 """
