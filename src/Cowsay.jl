@@ -56,7 +56,8 @@ Print an ASCII picture of a cow saying/thinking `message`
     cowfiles support this, though.
 - `tongue::AbstractString="  "`: A two-character string to be drawn in for the tongue. Not
     all cowfiles support this.
-- `wrap::Int`=40: The number of characters at which to wrap `message` to a new line
+- `wrap::Int=40`: The number of characters at which to wrap `message` to a new line
+- `nowrap::Bool=false`: Don't perform text wrapping on `message`
 
 # Example
 ```jldoctest
@@ -150,6 +151,7 @@ function cowmoo(message::AbstractString, mode; kwargs...)
     eyes = dict_or_default(kwargs, :eyes, "oo")
     tongue = dict_or_default(kwargs, :tongue, "  ")
     wrap = dict_or_default(kwargs, :wrap, 40)
+    nowrap = dict_or_default(kwargs, :nowrap, false)
 
     # Default to 'say' mode
     if mode ==:think
@@ -160,7 +162,8 @@ function cowmoo(message::AbstractString, mode; kwargs...)
         thoughts = "\\"
     end
 
-    speechbubble = balloon(TextWrap.wrap(message, width=wrap))
+    wrapped_message = !nowrap ? TextWrap.wrap(message, width=wrap) : message
+    speechbubble = balloon(wrapped_message)
 
     return string(speechbubble, cow(eyes=eyes, tongue=tongue, thoughts=thoughts))
 end

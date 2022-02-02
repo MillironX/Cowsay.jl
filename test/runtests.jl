@@ -25,4 +25,17 @@ DocMeta.setdocmeta!(Cowsay, :DocTestSetup, :(using Cowsay); recursive=true)
         # Cowthink with io redirection
         @test_warn cowthunk("Moo") cowthink(stderr, "Moo")
     end
+    @testset "Word Wrapping" begin
+        # Long text, default wrap
+        @test cowsaid("Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to ride a bull in a rodeo") == " _________________________________________\n/ Rollin' down a long highway out through \\\n| New Mexico driftin' down to Santa Fe to |\n\\ ride a bull in a rodeo                  /\n -----------------------------------------\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||\n"
+
+        # Long text, no wrap
+        @test cowsaid("Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to ride a bull in a rodeo", nowrap=true) == " ________________________________________________________________________________________________________\n< Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to ride a bull in a rodeo >\n --------------------------------------------------------------------------------------------------------\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||\n"
+
+        # Long text, conflicting wrap instructions (nowrap should win)
+        @test cowsaid("Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to ride a bull in a rodeo", wrap=80, nowrap=true) == " ________________________________________________________________________________________________________\n< Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to ride a bull in a rodeo >\n --------------------------------------------------------------------------------------------------------\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||\n"
+
+        # Long text, different wrap amount
+        @test cowsaid("Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to ride a bull in a rodeo", wrap=80) == " _________________________________________________________________________________\n/ Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to \\\n\\ ride a bull in a rodeo                                                          /\n ---------------------------------------------------------------------------------\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||\n"
+    end
 end
