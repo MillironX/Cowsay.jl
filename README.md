@@ -59,6 +59,23 @@ julia> cowthink("The farmers who have no livestock,\ntheir lives simply aren't t
                 ||     ||
 ```
 
+If you want to use talking cows in your program, use the `cowsaid` and
+`cowthunk` functions to get strings of the cow art.
+
+```julia-repl
+julia> @info string("\n", cowsaid("And the longhorns lowed him a welcome\nAs a new voice cried from the buckboard"))
+┌ Info:
+│  _________________________________________
+│ / And the longhorns lowed him a welcome   \
+│ \ As a new voice cried from the buckboard /
+│  -----------------------------------------
+│         \   ^__^
+│          \  (oo)\_______
+│             (__)\       )\/\
+│                 ||----w |
+└                 ||     ||
+```
+
 There are also plenty of [unexported Cowfiles] that you can use to customize
 your art.
 
