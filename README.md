@@ -32,7 +32,7 @@ add Cowsay
 
 Complete usage info can be found in [the documentation]. Cowsay.jl exports two
 functions: `cowsay` and `cowthink`, which print an ASCII cow saying or thinking
-a message without text wrapping, respectively.
+a message, respectively.
 
 ```julia-repl
 julia> using Cowsay
