@@ -63,10 +63,11 @@ There are also plenty of [unexported Cowfiles] that you can use to customize
 your art.
 
 ```julia-repl
-julia> cowsay("Super cattle growth hormone can make your beef delicious", cow=Cowsay.udder)
- __________________________________________________________
-< Super cattle growth hormone can make your beef delicious >
- ----------------------------------------------------------
+julia> cowsay("This heifer must be empty\n'Cuz she ain't puttin' out", cow=Cowsay.udder)
+ ____________________________
+/ This heifer must be empty  \
+\ 'Cuz she ain't puttin' out /
+ ----------------------------
   \
    \    (__)
         o o\
