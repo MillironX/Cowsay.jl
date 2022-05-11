@@ -166,7 +166,7 @@ function cowmoo(message::AbstractString, mode; kwargs...)
     eyes, tongue = construct_face!(eyes, tongue; kwargs...)
 
     # Default to 'say' mode
-    if mode ==:think
+    if mode == :think
         balloon = thinkballoon
         thoughts = "o"
     else
@@ -284,7 +284,7 @@ function sayballoon(message::AbstractString)
             " \\\n"
         )
         if nlines > 2
-            for i=2:nlines-1
+            for i = 2:nlines-1
                 balloon = string(
                     balloon,
                     "| ",
@@ -321,25 +321,25 @@ function thinkballoon(message::AbstractString)
     linelength = max(length.(messagelines)...)
     paddinglength = linelength + 2
 
-        balloon = string(
-            " ",
-            repeat("_", paddinglength),
-            "\n"
-        )
-        for i in 1:nlines
-            balloon = string(
-                balloon,
-                "( ",
-                rpad(messagelines[i], linelength),
-                " )\n"
-            )
-        end #for
+    balloon = string(
+        " ",
+        repeat("_", paddinglength),
+        "\n"
+    )
+    for i in 1:nlines
         balloon = string(
             balloon,
-            " ",
-            repeat("-", paddinglength),
-            "\n"
+            "( ",
+            rpad(messagelines[i], linelength),
+            " )\n"
         )
+    end #for
+    balloon = string(
+        balloon,
+        " ",
+        repeat("-", paddinglength),
+        "\n"
+    )
 
     return balloon
 end #function

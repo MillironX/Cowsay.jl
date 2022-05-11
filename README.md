@@ -128,7 +128,7 @@ julia> cowsay("He mooed we must fight\nEscape or we'll die\nCows gathered around
                 ||     ||
 ```
 
-[Julia REPL]: https://docs.julialang.org/en/v1/manual/getting-started/
+[julia repl]: https://docs.julialang.org/en/v1/manual/getting-started/
 [pkg mode]: https://docs.julialang.org/en/v1/stdlib/Pkg/
 [the documentation]: https://millironx.com/Cowsay.jl/stable
-[unexported Cowfiles]: https://millironx.com/Cowsay.jl/stable/cows/
+[unexported cowfiles]: https://millironx.com/Cowsay.jl/stable/cows/
