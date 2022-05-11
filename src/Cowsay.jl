@@ -59,6 +59,16 @@ Print an ASCII picture of a cow saying/thinking `message`
 - `wrap::Int=40`: The number of characters at which to wrap `message` to a new line
 - `nowrap::Bool=false`: Don't perform text wrapping on `message`
 
+## Cow appearance Keywords
+- `borg::Bool=false`: Initiates Borg mode
+- `dead::Bool=false`: Causes the cow to appear dead
+- `greedy::Bool=false`: Invokes greedy mode
+- `paranoid::Bool=false`: Causes a state of paranoia to come over the cow
+- `stoned::Bool=false`: Makes the cow appear thoroughly stoned
+- `tired::Bool=false`: Yields a tired cow
+- `wired::Bool=false`: Somewhat the opposite of `tired`, and initiates wired mode
+- `young::Bool=false`: Brings on the cow's youthful appearance
+
 # Example
 ```jldoctest
 julia> cowsay("Have you mooed today?")
@@ -153,6 +163,8 @@ function cowmoo(message::AbstractString, mode; kwargs...)
     wrap = dict_or_default(kwargs, :wrap, 40)
     nowrap = dict_or_default(kwargs, :nowrap, false)
 
+    eyes, tongue = construct_face!(eyes, tongue; kwargs...)
+
     # Default to 'say' mode
     if mode ==:think
         balloon = thinkballoon
@@ -166,6 +178,53 @@ function cowmoo(message::AbstractString, mode; kwargs...)
     speechbubble = balloon(wrapped_message)
 
     return string(speechbubble, cow(eyes=eyes, tongue=tongue, thoughts=thoughts))
+end
+
+function construct_face!(eyes, tongue; kwargs...)
+    borg = dict_or_default(kwargs, :borg, false)
+    dead = dict_or_default(kwargs, :dead, false)
+    greedy = dict_or_default(kwargs, :greedy, false)
+    paranoid = dict_or_default(kwargs, :paranoid, false)
+    stoned = dict_or_default(kwargs, :stoned, false)
+    tired = dict_or_default(kwargs, :tired, false)
+    wired = dict_or_default(kwargs, :wired, false)
+    young = dict_or_default(kwargs, :young, false)
+
+    if borg
+        eyes = "=="
+    end
+
+    if dead
+        eyes = "xx"
+        tongue = "U "
+    end
+
+    if greedy
+        eyes = "\$\$"
+    end
+
+    if paranoid
+        eyes = "@@"
+    end
+
+    if stoned
+        eyes = "**"
+        tongue = "U "
+    end
+
+    if tired
+        eyes = "--"
+    end
+
+    if wired
+        eyes = "OO"
+    end
+
+    if young
+        eyes = ".."
+    end
+
+    return eyes, tongue
 end
 
 """
