@@ -8,6 +8,10 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+### Added
+
+- Cow "modes" (Borg, dead, greedy, etc.)
+
 ## [v0.3.1] - 2022-02-01
 
 ### Fixed
@@ -79,7 +83,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 - `cowsay` function for Julia in package format
 
-[Unreleased]: https://github.com/MillironX/Cowsay.jl/compare/v0.3.1...HEAD
+[unreleased]: https://github.com/MillironX/Cowsay.jl/compare/v0.3.1...HEAD
 [v0.3.0]: https://github.com/MillironX/Cowsay.jl/compare/v0.3.0...v0.3.1
 [v0.3.0]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.1...v0.3.0
 [v0.2.1]: https://github.com/MillironX/Cowsay.jl/compare/v0.2.0...v0.2.1
