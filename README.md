@@ -15,6 +15,7 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://millironx.com/Cowsay.jl/dev)
 [![Build Status](https://github.com/MillironX/Cowsay.jl/workflows/CI/badge.svg)](https://github.com/MillironX/Cowsay.jl/actions)
 [![Coverage](https://codecov.io/gh/MillironX/Cowsay.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MillironX/Cowsay.jl)
+[![Genie Downloads](https://shields.io/endpoint?url=https://pkgs.genieframework.com/api/v1/badge/Cowsay)](https://pkgs.genieframework.com?packages=Cowsay)
 
 A talking cow library for Julia, based on the [Fedora release of
 cowsay](https://src.fedoraproject.org/rpms/cowsay).
