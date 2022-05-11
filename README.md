@@ -111,6 +111,23 @@ julia> cowsay("You better watch your step\nwhen you know the chips are down!", t
                 ||     ||
 ```
 
+And even change its emotional or physical state using modes.
+
+```julia-repl
+julia> cowsay("He mooed we must fight\nEscape or we'll die\nCows gathered around\n'Cause the steaks were so high"; dead=true)
+ ________________________________
+/ He mooed we must fight         \
+| Escape or we'll die            |
+| Cows gathered around           |
+\ 'Cause the steaks were so high /
+ --------------------------------
+        \   ^__^
+         \  (xx)\_______
+            (__)\       )\/\
+             U  ||----w |
+                ||     ||
+```
+
 [Julia REPL]: https://docs.julialang.org/en/v1/manual/getting-started/
 [pkg mode]: https://docs.julialang.org/en/v1/stdlib/Pkg/
 [the documentation]: https://millironx.com/Cowsay.jl/stable
