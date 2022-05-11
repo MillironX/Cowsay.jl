@@ -38,4 +38,15 @@ DocMeta.setdocmeta!(Cowsay, :DocTestSetup, :(using Cowsay); recursive=true)
         # Long text, different wrap amount
         @test cowsaid("Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to ride a bull in a rodeo", wrap=80) == " _________________________________________________________________________________\n/ Rollin' down a long highway out through New Mexico driftin' down to Santa Fe to \\\n\\ ride a bull in a rodeo                                                          /\n ---------------------------------------------------------------------------------\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||\n"
     end
+    @testset "Cow Modes" begin
+        @test Cowsay.construct_face!("oo", "  ") == ("oo", "  ")
+        @test Cowsay.construct_face!("oo", "  "; borg=true) == ("==", "  ")
+        @test Cowsay.construct_face!("oo", "  "; dead=true) == ("xx", "U ")
+        @test Cowsay.construct_face!("oo", "  "; greedy=true) == ("\$\$", "  ")
+        @test Cowsay.construct_face!("oo", "  "; paranoid=true) == ("@@", "  ")
+        @test Cowsay.construct_face!("oo", "  "; stoned=true) == ("**", "U ")
+        @test Cowsay.construct_face!("oo", "  "; tired=true) == ("--", "  ")
+        @test Cowsay.construct_face!("oo", "  "; wired=true) == ("OO", "  ")
+        @test Cowsay.construct_face!("oo", "  "; young=true) == ("..", "  ")
+    end
 end
