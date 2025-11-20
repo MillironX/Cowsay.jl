@@ -2,7 +2,7 @@
 
 ```plaintext
  ___________________
-< Cowsay for Juila! >
+< Cowsay for Julia! >
  -------------------
         \   ^__^
          \  (oo)\_______
